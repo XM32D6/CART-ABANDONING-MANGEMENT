@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Notification</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffcc00, #ff6699, #66b3ff, #ffcc00);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .notification {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .checkout-btn:hover {
+            background-color: #218838;
+        }
+
+        .shop-btn {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .shop-btn:hover {
+            background-color: #0056b3;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="notification">
+        <h1>Cart Notification</h1>
+        <p>Your cart contains items! Don't forget to check out.<p>Hurry UP! Only limited stock left</p></p>
+        <div class="button-container">
+            <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            <button class="shop-btn" onclick="continueShopping()">Discard And Continue Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        function proceedToCheckout() {
+            window.location.href = "FIRST PAGE.html"; 
+        }
+
+        function continueShopping() {
+            window.location.href = "HOME PAGE.html"; 
+        }
+    </script>
+</body>
+</html>
+
+
+
+
